@@ -59,6 +59,7 @@ const Home = ({ links }: { links: LinkType[]}) => {
         if(link?.type === 'vanilla')
           return (<a 
             target="_blank"
+            rel="noreferrer"
             href={`/api/link/${link?.id}` ?? '#'} className='shadow hover:scale-105 duration-300 ease-in-out flex flex-col w-full text-center px-3 py-5 mb-3 bg-white text-black text-lg font-medium rounded-lg' key={link?.id}>{link?.label}</a>)
         if(link?.type === 'avatar')
           return (<div className='flex items-center justify-center overflow-hidden w-24 h-24 rounded-full mb-6' key={link?.id}>
