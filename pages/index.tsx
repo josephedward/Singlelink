@@ -57,7 +57,7 @@ const Home = ({ links }: { links: LinkType[]}) => {
             <h2 className='text-xl text-gray-600'>{link?.content}</h2>
           </div>)
         if(link?.type === 'vanilla')
-          return (<a 
+          return (<a
             target="_blank"
             rel="noreferrer"
             href={`/api/link/${link?.id}` ?? '#'} className='shadow hover:scale-105 duration-300 ease-in-out flex flex-col w-full text-center px-3 py-5 mb-3 bg-white text-black text-lg font-medium rounded-lg' key={link?.id}>{link?.label}</a>)
@@ -74,7 +74,7 @@ const Home = ({ links }: { links: LinkType[]}) => {
         if(link?.type === 'html')
           return (<div key={link.id}>{parse(link.content)}</div>)
       })}
-      {process.env.BRANDING && <div className='text-gray-600 mt-auto mt-10 text-center'>Build your free micro-site in seconds with <a href="https://singlelink.co" className='font-medium text-indigo-600 hover:underline hover:text-indigo-700'>Singlelink</a></div>}
+      {/* {process.env.BRANDING && <div className='text-gray-600 mt-auto mt-10 text-center'>Build your free micro-site in seconds with <a href="https://singlelink.co" className='font-medium text-indigo-600 hover:underline hover:text-indigo-700'>Singlelink</a></div>} */}
     </div>
     </>
   )
